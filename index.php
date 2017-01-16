@@ -13,14 +13,19 @@ class StrUtils {
 	public function bold() {
 		$bold = '<b>'.$this -> _str.'</b>';
 		$this -> _str = $bold;
+		return $bold;
 	}
 
 	public function italic() {
-		return '<i>'.$this -> _str.'</i>';
+		$italic = '<i>'.$this -> _str.'</i>';
+		$this -> _str = $italic;
+		return $italic;
 	}
 
 	public function underline() {
-		return '<u>'.$this -> _str.'</u>';
+		$underline = '<u>'.$this -> _str.'</u>';
+		$this -> _str = $underline;
+		return $underline;
 	}
 
 	public function capitalize() {
@@ -46,12 +51,12 @@ class StrUtils {
 <body>
 	<div>
 		<ul>
-			<li><?= ("Normal: " . $myStr -> getStr()); ?></li>	
-			<li><?= ('Bold: '. $myStr -> bold()); ?></li>
-			<li><?= ('Italic: '. $myStr -> italic()); ?></li>
-			<li><?= ('Underline: '.$myStr -> underline()); ?></li>
+			<li><?= 'Normal: ' . $myStr -> getStr(); ?></li>
+			<li><?= 'Bold: '. $myStr -> bold(); ?></li>
+			<li><?= 'Italic: '. $myStr -> italic(); ?></li>
+			<li><?= 'Underline: '.$myStr -> underline(); ?></li>
 			<li></li>
-			<li><?= ('Uglify: '.$myStr -> uglify()); ?></li>
+			<li><?= 'Uglify: '.$myStr -> getStr(); ?></li>
 		</ul>
 	</div>
 	
